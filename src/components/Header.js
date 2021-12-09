@@ -21,7 +21,10 @@ const Header = () => {
 
   let navMenuClasses
   navMenuClasses = navClicked ? 'nav-menu nav-menu-active' : 'nav-menu'
+  const redirectHandler = projectLink => {
 
+    window.open(`${projectLink}`);
+  }
   return (
     <div className="header">
       <div className="container">
@@ -38,7 +41,9 @@ const Header = () => {
               <NavLink activeClassName='active-a' exact to='/'>Home</NavLink>
               <NavLink activeClassName='active-a' to='/portfolio'>Portfolio</NavLink>
               <NavLink activeClassName='active-a' to='/cv'>My CV</NavLink>
-              <a><button>View Code</button></a>
+              <a><button onClick={() => {
+                redirectHandler("https://github.com/quocbaole/portfolio")
+              }}>View Code</button></a>
               {/* <a href='idnstagram.com'>InstNavLinkgram</a> */}
             </div>
           }

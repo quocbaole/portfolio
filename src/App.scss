@@ -13,7 +13,9 @@ $desktop-width: 1024px;
 
 .App {
   text-align: center;
-
+  button {
+    cursor: pointer;
+  }
   .border-top {
     border-top: solid 1px black;
   }

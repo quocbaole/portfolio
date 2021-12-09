@@ -9,7 +9,7 @@ const Projects = props => {
     : 'container border-top'
 
   const redirectHandler = projectLink => {
-    console.log(5)
+
     window.open(`${projectLink}`);
   }
   return (
