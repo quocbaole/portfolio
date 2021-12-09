@@ -12,19 +12,23 @@ const Contact = () => {
       <div className="container">
         <h1>_tum.5420_</h1>
         <div className="flex-block">
-          <img src={ig1} alt="ig1" />
-          <img src={ig2} alt="ig2" />
-          <img src={ig3} alt="ig3" />
-          <img src={ig4} alt="ig4" />
-          <img src={ig5} alt="ig5" />
+          <a href="https://www.instagram.com/_tum.5420_/"><img src={ig1} alt="ig1" /></a>
+          <a href="https://www.instagram.com/_tum.5420_/"><img src={ig2} alt="ig2" /></a>
+          <a href="https://www.instagram.com/_tum.5420_/"> <img src={ig3} alt="ig3" /></a>
+          <a href="https://www.instagram.com/_tum.5420_/"><img src={ig4} alt="ig4" /></a>
+          <a href="https://www.instagram.com/_tum.5420_/"> <img src={ig5} alt="ig5" /></a>
         </div>
-        <div className="call">
-          <p>DESCRIBE YOUR PROJECT</p>
-          <h1>Call<br /> Quoc Bao</h1>
-          <img src={arrow} alt="arrow" />
+        <div className="call-block">
+          <a href="https://www.instagram.com/_tum.5420_/" >
+            <div className="call">
+              <p>DESCRIBE YOUR PROJECT</p>
+              <h1>Call<br /> Quoc Bao</h1>
+              <img src={arrow} alt="arrow" />
+            </div>
+          </a>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

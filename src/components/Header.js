@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { IconContext } from 'react-icons'
-import { FaBars, FaCross, FaTimes } from "react-icons/fa"
+import { FaBars, FaTimes } from "react-icons/fa"
+import { NavLink } from 'react-router-dom'
 import logo from "../images/Quoc Bao-logos_transparent.png"
 const Header = () => {
   const [button, setButton] = useState(false)
@@ -25,18 +25,48 @@ const Header = () => {
   return (
     <div className="header">
       <div className="container">
-        {!button && <button onClick={showNav}><FaBars className="icon" /></button>
-        }
-        <img src={logo} />
-        <div className="place-holder" />
-        <div className={navMenuClasses}>
-          <button onClick={hideNav}><FaTimes className="icon" /></button>
-          <div className="nav-container">
-            <a>Home</a>
-            <a>Education and Experience</a>
-            <a>Contact</a>
-          </div>
+        <div className='flex-block'>
+          {!button &&
+            <button onClick={showNav} lassName='bars-button'>
+              <FaBars className="icon" />
+            </button>
+          }
+          <img src={logo} />
+          {!button && <div className="place-holder" />}
+          {button &&
+            <div className="desktop-nav-container">
+              <NavLink activeClassName='active-a' exact to='/'>Home</NavLink>
+              <NavLink activeClassName='active-a' to='/portfolio'>Portfolio</NavLink>
+              <NavLink activeClassName='active-a' to='/cv'>My CV</NavLink>
+              <a><button>View Code</button></a>
+              {/* <a href='idnstagram.com'>InstNavLinkgram</a> */}
+            </div>
+          }
         </div>
+
+
+
+        <div className='slider-block'>
+
+          {!button &&
+            <div className={navMenuClasses}>
+              <button onClick={hideNav} className='close-button'><FaTimes className="icon" /></button>
+
+              <div className="nav-container">
+                <button className='nav-button' onClick={hideNav}>
+                  <NavLink activeClassName='active-a' exact to='/'>Home</NavLink>
+                </button>
+                <button className='nav-button' onClick={hideNav}>
+                  <NavLink activeClassName='active-a' to='/portfolio'>Portfolio</NavLink>
+                </button>
+                <button className='nav-button' onClick={hideNav}>
+                  <NavLink activeClassName='active-a' to='/cv'> CV</NavLink>
+                </button>
+              </div>
+            </div>
+          }
+        </div>
+
       </div>
     </div>
   )

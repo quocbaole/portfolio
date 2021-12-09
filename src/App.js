@@ -1,23 +1,32 @@
+import SimpleBar from 'simplebar-react';
 import './App.scss';
-import Advantage from './components/Advantage';
-import Contact from './components/Contact';
-import EduAndEx from './components/EduAndEx';
-import Header from './components/Header'
-import Overall from './components/Overall'
-import Projects from './components/Projects';
-import Quotes from './components/Quotes';
+
+import 'simplebar/dist/simplebar.min.css';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import "animate.css/animate.min.css";
+import { Route, Switch } from 'react-router-dom';
+import Home from './screens/Home';
+import Portfolio from './screens/Portfolio';
+import Header from './components/Header';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <Header />
-      <Overall />
-      <Advantage />
-      <EduAndEx />
-      <Projects />
-      <Quotes />
-      <Contact />
-    </div>
+
+
+    <SimpleBar style={{ height: '100vh' }}>
+
+      <div className="App">
+        <Header />
+
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/portfolio" component={Portfolio} />
+        </Switch>
+      </div>
+    </SimpleBar>
+
   );
 }
 

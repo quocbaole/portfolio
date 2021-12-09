@@ -2,7 +2,7 @@ import React from 'react'
 
 const EduAndEx = () => {
   return (
-    <div className="edu-and-ex ">
+    <div className="edu-and-ex " >
       <div className="container border-top">
         <h1>Education & Experience</h1>
         <div className="row-flex">
@@ -40,7 +40,7 @@ const EduAndEx = () => {
             </div>
             <div className="item">
               <h5>Japanese Certificate</h5>
-              <p>KGU University</p>
+              <p>JLPT N2</p>
             </div>
             <div className="item">
               <h5>Mobile Dev Project</h5>

@@ -5,7 +5,7 @@ import udemy from '../images/udemy.png'
 import cybersoft from '../images/cybersoft.png'
 const Overall = () => {
   return (
-    <div className="overall">
+    <div className="overall" >
       <div className="container">
         <div className="title">
           <h1>Le Quoc Bao</h1>
@@ -19,7 +19,7 @@ const Overall = () => {
           <div className="text">
             <div className="item">
               <h4>BIOGRAPHY</h4>
-              <p>Student at FPT University. I'm Bao,a senior of Japanese department , and
+              <p>Student at FPT University. I'm Bao, a senior of Japanese department, and
                 interested in making Webs. </p><p>
                 Inspired to be a Front End developer.
               </p>
