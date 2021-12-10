@@ -5,10 +5,21 @@ import EduAndEx from '../components/EduAndEx'
 import Overall from '../components/Overall'
 import Projects from '../components/Projects'
 import Quotes from '../components/Quotes'
+import { useState } from 'react';
+import ContactModal from '../components/ContactModal'
 
 const Home = () => {
+  const [modalIsShown, setModalIsShown] = useState(false)
+
+  const showModalHandler = () => {
+    setModalIsShown(true)
+  }
+  const hideModalHandler = () => {
+    setModalIsShown(false)
+  }
   return (
     <>
+      {modalIsShown && <ContactModal hideModalHandler={hideModalHandler} />}
       <Overall />
 
       <Advantage />
@@ -16,7 +27,7 @@ const Home = () => {
       <EduAndEx />
       <Projects />
       <Quotes />
-      <Contact />
+      <Contact showModalHandler={showModalHandler} />
     </>
   )
 }

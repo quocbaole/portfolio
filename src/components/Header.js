@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaBars, FaTimes } from "react-icons/fa"
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import logo from "../images/Quoc Bao-logos_transparent.png"
 const Header = () => {
   const [button, setButton] = useState(false)
@@ -34,12 +34,12 @@ const Header = () => {
               <FaBars className="icon" />
             </button>
           }
-          <img src={logo} />
+          <Link to='/'><img src={logo} /></Link>
           {!button && <div className="place-holder" />}
           {button &&
             <div className="desktop-nav-container">
               <NavLink activeClassName='active-a' exact to='/'>Home</NavLink>
-              <NavLink activeClassName='active-a' to='/portfolio'>Portfolio</NavLink>
+              <NavLink activeClassName='active-a' to='/contact'>Contact</NavLink>
               <NavLink activeClassName='active-a' to='/cv'>My CV</NavLink>
               <a><button onClick={() => {
                 redirectHandler("https://github.com/quocbaole/portfolio")
@@ -62,10 +62,15 @@ const Header = () => {
                   <NavLink activeClassName='active-a' exact to='/'>Home</NavLink>
                 </button>
                 <button className='nav-button' onClick={hideNav}>
-                  <NavLink activeClassName='active-a' to='/portfolio'>Portfolio</NavLink>
+                  <NavLink activeClassName='active-a' to='/contact'>Contact</NavLink>
                 </button>
                 <button className='nav-button' onClick={hideNav}>
                   <NavLink activeClassName='active-a' to='/cv'> CV</NavLink>
+                </button>
+                <button className='nav-button' onClick={hideNav}>
+                  <a><button onClick={() => {
+                    redirectHandler("https://github.com/quocbaole/portfolio")
+                  }}>Code</button></a>
                 </button>
               </div>
             </div>

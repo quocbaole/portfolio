@@ -6,7 +6,7 @@ import ig4 from '../images/ig4.png'
 import ig5 from '../images/ig5.png'
 import arrow from '../images/arrow.svg'
 
-const Contact = () => {
+const Contact = (props) => {
   return (
     <div className="contact">
       <div className="container">
@@ -19,13 +19,13 @@ const Contact = () => {
           <a href="https://www.instagram.com/_tum.5420_/"> <img src={ig5} alt="ig5" /></a>
         </div>
         <div className="call-block">
-          <a href="https://www.instagram.com/_tum.5420_/" >
+          <button onClick={props.showModalHandler} >
             <div className="call">
               <p>DESCRIBE YOUR PROJECT</p>
               <h1>Call<br /> Quoc Bao</h1>
               <img src={arrow} alt="arrow" />
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </div >
