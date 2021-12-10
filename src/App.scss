@@ -753,6 +753,10 @@ $desktop-width: 1024px;
         background-color: transparent;
         margin: 0 auto;
         overflow: hidden;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
         .call {
           margin-top: 4rem;
           text-align: left;
@@ -794,7 +798,7 @@ $desktop-width: 1024px;
     .flex-block {
       .info {
         display: flex;
-        padding: 5rem;
+        // padding: 5rem;
         .info-flex-block {
           flex-basis: 60%;
           height: 60vh;
@@ -838,6 +842,7 @@ $desktop-width: 1024px;
           height: 30rem;
         }
         @media all and (min-width: 960px) {
+          padding: 5rem;
           img {
             display: block;
           }

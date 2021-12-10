@@ -14,15 +14,16 @@ import ContactPage from './screens/ContactPage';
 function App() {
 
   return (
-    <SimpleBar style={{ height: '100vh' }}>
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/contact" component={ContactPage} />
-        </Switch>
-      </div>
-    </SimpleBar>
+    // <SimpleBar style={{ height: '100vh' }}>
+    <div className="App">
+      <Header />
+
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/contact" component={ContactPage} />
+      </Switch>
+    </div>
+    // </SimpleBar>
 
   );
 }

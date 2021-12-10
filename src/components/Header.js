@@ -10,7 +10,7 @@ const Header = () => {
       setButton(false)
     } else setButton(true)
   }
-  const closeMobileMenu = () => { }
+
   useEffect(() => {
     showButton()
   }, [])
