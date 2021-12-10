@@ -6,10 +6,9 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 import "animate.css/animate.min.css";
 import { Route, Switch } from 'react-router-dom';
 import Home from './screens/Home';
-import Portfolio from './screens/Portfolio';
+
 import Header from './components/Header';
-import ContactModal from './components/ContactModal';
-import { useState } from 'react';
+
 import ContactPage from './screens/ContactPage';
 
 function App() {
