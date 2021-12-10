@@ -35,7 +35,7 @@ const Contact = (props) => {
               <Link to='/contact'>
                 <div className="call">
                   <p>DESCRIBE YOUR PROJECT</p>
-                  <h1>Call<br /> Quoc Bao</h1>
+                  <h1>Contact<br /> Quoc Bao</h1>
                   <img src={arrow} alt="arrow" />
                 </div>
               </Link>
@@ -44,7 +44,7 @@ const Contact = (props) => {
             <button onClick={props.showModalHandler} >
               <div className="call">
                 <p>DESCRIBE YOUR PROJECT</p>
-                <h1>Call<br /> Quoc Bao</h1>
+                <h1>Contact<br /> Quoc Bao</h1>
                 <img src={arrow} alt="arrow" />
               </div>
             </button>
