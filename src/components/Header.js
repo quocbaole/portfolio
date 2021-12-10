@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { FaBars, FaTimes } from "react-icons/fa"
 import { Link, NavLink } from 'react-router-dom'
 import logo from "../images/Quoc Bao-logos_transparent.png"
+import resume from "../images/resume.pdf"
+
 const Header = () => {
   const [button, setButton] = useState(false)
   const [navClicked, setNavClicked] = useState(false)
@@ -40,11 +42,13 @@ const Header = () => {
             <div className="desktop-nav-container">
               <NavLink activeClassName='active-a' exact to='/'>Home</NavLink>
               <NavLink activeClassName='active-a' to='/contact'>Contact</NavLink>
-              <NavLink activeClassName='active-a' to='/cv'>My CV</NavLink>
+
+              <a><button onClick={() => {
+                window.open(resume, "_none")
+              }}>My CV</button></a>
               <a><button onClick={() => {
                 redirectHandler("https://github.com/quocbaole/portfolio")
               }}>View Code</button></a>
-              {/* <a href='idnstagram.com'>InstNavLinkgram</a> */}
             </div>
           }
         </div>
@@ -64,8 +68,9 @@ const Header = () => {
                 <button className='nav-button' onClick={hideNav}>
                   <NavLink activeClassName='active-a' to='/contact'>Contact</NavLink>
                 </button>
+
                 <button className='nav-button' onClick={hideNav}>
-                  <NavLink activeClassName='active-a' to='/cv'> CV</NavLink>
+                  <a href={resume} target="_blank" rel="noreferrer">CV</a>
                 </button>
                 <button className='nav-button' onClick={hideNav}>
                   <a><button onClick={() => {

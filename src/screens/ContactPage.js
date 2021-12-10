@@ -1,20 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaEnvelope, FaMapMarker, FaPhone, FaTimes, FaUserAlt } from 'react-icons/fa'
 import contact from '../images/contact.png'
-
+import AOS from 'aos'
 const ContactPage = (props) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    })
+  }, [])
   return (
     <div className='contact-page'>
       <div className='container'>
         <div className='title'>
-          <h1>Let's get in touch</h1>
-          <p>I'm open for any suggestion or just to have a chat.</p>
+          <h1 data-aos="fade">Let's get in touch</h1>
+          <p data-aos="fade">I'm open for any suggestion or just to have a chat.</p>
         </div>
         <div className='flex-block'>
           <div className='info'>
             <div className='info-flex-block'>
 
-              <div className='item'>
+              <div className='item' data-aos="fade">
                 <div className='icon'>
                   <FaMapMarker />
                 </div>
@@ -23,7 +28,7 @@ const ContactPage = (props) => {
                   <p>118 Vo Van Hat, District 9, Thu Duc City</p>
                 </div>
               </div>
-              <div className='item'>
+              <div className='item' data-aos="fade">
                 <div className='icon'>
                   <FaPhone />
                 </div>
@@ -32,7 +37,7 @@ const ContactPage = (props) => {
                   <p>0889 210 454</p>
                 </div>
               </div>
-              <div className='item'>
+              <div className='item' data-aos="fade">
                 <div className='icon'>
                   <FaEnvelope />
                 </div>
@@ -42,7 +47,7 @@ const ContactPage = (props) => {
                 </div>
               </div>
             </div>
-            <img src={contact} alt='contact' />
+            <img data-aos="fade" src={contact} alt='contact' />
           </div>
 
           <div className='mail'>

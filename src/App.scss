@@ -13,8 +13,14 @@ $desktop-width: 1024px;
 
 .App {
   text-align: center;
-  button {
+  button,
+  a {
     cursor: pointer;
+  }
+  div,
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
   }
   .border-top {
     border-top: solid 1px black;

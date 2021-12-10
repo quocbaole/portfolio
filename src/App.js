@@ -10,8 +10,10 @@ import Home from './screens/Home';
 import Header from './components/Header';
 
 import ContactPage from './screens/ContactPage';
+import 'aos/dist/aos.css'
 
 function App() {
+
 
   return (
     // <SimpleBar style={{ height: '100vh' }}>

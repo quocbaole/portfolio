@@ -1,12 +1,17 @@
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import AOS from 'aos'
 const EduAndEx = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    })
+  }, [])
   return (
     <div className="edu-and-ex " >
-      <div className="container border-top">
-        <h1>Education & Experience</h1>
+      <div className="container border-top" data-aos="fade">
+        <h1 data-aos="fade">Education & Experience</h1>
         <div className="row-flex">
-          <div className="column-flex">
+          <div className="column-flex" data-aos="fade">
             <h6>2018</h6>
             <div className="item">
               <h5>Highschool Graduated</h5>
@@ -17,7 +22,7 @@ const EduAndEx = () => {
               <p>FPT University</p>
             </div>
           </div>
-          <div className="column-flex">
+          <div className="column-flex" data-aos="fade">
             <h6>2019 - 2020</h6>
             <div className="item">
               <h5>Malaysia Foreign Exchange</h5>
@@ -32,7 +37,7 @@ const EduAndEx = () => {
               <p>Beginner to Intermediate Japanese Level</p>
             </div>
           </div>
-          <div className="column-flex">
+          <div className="column-flex" data-aos="fade">
             <h6>2021 - PRESENT</h6>
             <div className="item">
               <h5>Front End Course</h5>

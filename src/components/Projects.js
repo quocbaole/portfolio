@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styledcomponent from '../images/styledcomponent.png'
 import reactmeals from '../images/reactmeals.png'
+import AOS from 'aos'
 const Projects = props => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000
+    })
+  }, [])
   const containerClass = props.noBorder ?
     'container '
     : 'container border-top'
@@ -14,9 +20,9 @@ const Projects = props => {
   }
   return (
     <div className="projects">
-      <div className={containerClass}>
-        <h1>My Latest Projects</h1>
-        <div className="carousel">
+      <div data-aos="fade" className={containerClass}>
+        <h1 data-aos="fade">My Latest Projects</h1>
+        <div className="carousel" data-aos="fade">
           <Carousel
             infiniteLoop={true}
             showStatus={false}
@@ -55,7 +61,7 @@ const Projects = props => {
           </Carousel>
         </div>
         <div className="flex-block">
-          <div className="item">
+          <div className="item" data-aos="fade">
             <div className="img-container">
               <div className="buttons">
                 <button onClick={() => {
@@ -72,7 +78,7 @@ const Projects = props => {
               <h5>React meals</h5>
             </div>
           </div>
-          <div className="item">
+          <div className="item" data-aos="fade">
             <div className="img-container">
               <div className="buttons">
                 <button onClick={() => {
