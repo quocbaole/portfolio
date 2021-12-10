@@ -792,6 +792,9 @@ $desktop-width: 1024px;
   .container {
     .title {
       padding: 0 1rem;
+      h1 {
+        font-family: 'Playfair Display', serif;
+      }
       p {
       }
     }
@@ -819,10 +822,12 @@ $desktop-width: 1024px;
               justify-content: center;
 
               svg {
+                transition: 0.5s ease;
                 margin-left: auto;
                 margin-right: auto;
               }
             }
+
             .content {
               flex-basis: 80%;
               text-align: left;
@@ -833,6 +838,11 @@ $desktop-width: 1024px;
               h5 {
                 margin-bottom: 5px;
               }
+            }
+          }
+          :hover {
+            svg {
+              color: #fa4529;
             }
           }
         }
