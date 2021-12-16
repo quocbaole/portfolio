@@ -23,6 +23,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/contact" component={ContactPage} />
+        <Route path="/" component={Home} />
       </Switch>
     </div>
     // </SimpleBar>
